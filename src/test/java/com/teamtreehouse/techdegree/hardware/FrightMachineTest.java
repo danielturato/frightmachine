@@ -1,5 +1,7 @@
 package com.teamtreehouse.techdegree.hardware;
 
+import com.example.accessory.Horn;
+import com.example.accessory.Strobe;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -20,6 +22,9 @@ public class FrightMachineTest {
     @Before
     public void setUp() throws Exception {
         machine = new FrightMachine();
+        machine.addAccessory("horn", new Horn());
+        machine.addAccessory("Strobe Lights", new Strobe());
+        machine.addAccessory("Camera", new Camera());
     }
 
     @Test
